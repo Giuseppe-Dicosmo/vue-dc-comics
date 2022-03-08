@@ -3,6 +3,8 @@
     <HeaderNav />
     <MainContent />
     <MainShop />
+    <MainInfo />
+    <footerSocial />
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import HeaderNav from "./components/HeaderNav.vue";
 import MainContent from "./components/MainContent.vue";
 import MainShop from "./components/MainShop.vue";
+import MainInfo from "./components/MainInfo.vue";
+import footerSocial from "./components/footerSocial.vue";
 
 export default {
   name: "App",
@@ -17,6 +21,8 @@ export default {
     HeaderNav,
     MainContent,
     MainShop,
+    MainInfo,
+    footerSocial,
   },
 };
 </script>
