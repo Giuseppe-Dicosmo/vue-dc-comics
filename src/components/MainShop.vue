@@ -2,44 +2,12 @@
   <main class="container-Content">
     <div class="container">
       <ul class="container-Shop">
-        <li>
+        <li v-for="(link, i) in links" :key="i">
           <a href="#">
             <figure class="img-Shop">
-              <img src="../assets/buy-comics-digital-comics.png" alt="" />
+              <img :src="require('../assets/' + link.img)" alt="" />
             </figure>
-            <span> lorem </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="img-Shop">
-              <img src="../assets/buy-comics-merchandise.png" alt="" />
-            </figure>
-            <span> lorem </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="img-Shop">
-              <img src="../assets/buy-comics-subscriptions.png" alt="" />
-            </figure>
-            <span> lorem </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="img-Shop">
-              <img src="../assets/buy-comics-shop-locator.png" alt="" />
-            </figure>
-            <span> lorem </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="img-Shop">
-              <img src="../assets/buy-dc-power-visa.svg" alt="" />
-            </figure>
-            <span> lorem </span>
+            {{ link.text }}
           </a>
         </li>
       </ul>
@@ -50,6 +18,37 @@
 <script>
 export default {
   name: "MainShop",
+  data() {
+    return {
+      links: [
+        {
+          img: "buy-comics-digital-comics.png",
+          text: "digital comics",
+          href: "#",
+        },
+        {
+          img: "buy-comics-merchandise.png",
+          text: "dc merchandise",
+          href: "#",
+        },
+        {
+          img: "buy-comics-subscriptions.png",
+          text: "subscription",
+          href: "#",
+        },
+        {
+          img: "buy-comics-shop-locator.png",
+          text: "comic shop locator",
+          href: "#",
+        },
+        {
+          img: "buy-dc-power-visa.svg",
+          text: "dc power visa",
+          href: "#",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -75,17 +74,18 @@ export default {
 
     li {
       display: flex;
-
       a {
         display: flex;
         align-items: center;
         flex-direction: row;
+        font-size: 13px;
         gap: 10px;
         text-decoration: none;
         color: white;
+        text-transform: uppercase;
 
         figure {
-          height: 50%;
+          height: 35%;
 
           img {
             height: 100%;
