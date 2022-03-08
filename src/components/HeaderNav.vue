@@ -99,6 +99,7 @@ export default {
   li {
     display: flex;
     align-items: center;
+    border-bottom: 5px solid transparent;
 
     &:hover,
     &:nth-child(2) {

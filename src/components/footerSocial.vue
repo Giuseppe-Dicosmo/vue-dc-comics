@@ -1,15 +1,13 @@
 <template>
   <main class="container-Content">
     <div class="container">
-      <a href="#">SING-UP NOW!</a>
+      <a class="button" href="#">{{button}}</a>
       <div class="container-social">
         <span>FOLLOW US</span>
-        <figure>
-          <img src="../assets/footer-facebook.png" alt="" />
-          <img src="../assets/footer-twitter.png" alt="" />
-          <img src="../assets/footer-youtube.png" alt="" />
-          <img src="../assets/footer-pinterest.png" alt="" />
-          <img src="../assets/footer-periscope.png" alt="" />
+        <figure v-for="(link, i) in links" :key="i">
+          <a :href="link.href"
+            ><img :src="require('../assets/' + link.img)" alt=""
+          /></a>
         </figure>
       </div>
     </div>
@@ -19,6 +17,33 @@
 <script>
 export default {
   name: "MainContent",
+  data() {
+    return {
+      button: "SING-UP NOW!",
+      links: [
+        {
+          img: "footer-facebook.png",
+          href: "#",
+        },
+        {
+          img: "footer-twitter.png",
+          href: "#",
+        },
+        {
+          img: "footer-youtube.png",
+          href: "#",
+        },
+        {
+          img: "footer-pinterest.png",
+          href: "#",
+        },
+        {
+          img: "footer-periscope.png",
+          href: "#",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -37,24 +62,28 @@ export default {
     justify-content: space-between;
     flex-grow: 1;
     // border: 1px solid red;
-  }
 
-  a {
-    padding: 10px;
-    color: white;
-    font-size: 15px;
-    border: 3px solid #0282f9;
-    text-decoration: none;
-  }
-  .container-social {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    height: 50%;
-
-    figure {
+    .button {
+      padding: 10px;
+      color: white;
+      font-size: 15px;
+      border: 3px solid #0282f9;
+      text-decoration: none;
+    }
+    .container-social {
       display: flex;
-      gap: 10px;
+      align-items: center;
+      gap: 20px;
+      height: 50%;
+
+      span {
+        color: #0282f9;
+      }
+
+      figure {
+        display: flex;
+        gap: 10px;
+      }
     }
   }
 }

@@ -77,12 +77,17 @@ export default {
       a {
         display: flex;
         align-items: center;
-        flex-direction: row;
+        flex-flow: row wrap;
         font-size: 13px;
         gap: 10px;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
+        padding: 0 10px;
+
+        &:hover {
+          background: rgba($color: #ffffff15, $alpha: 0.5);
+        }
 
         figure {
           height: 35%;

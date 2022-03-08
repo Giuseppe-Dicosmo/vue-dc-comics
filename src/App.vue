@@ -3,7 +3,7 @@
     <HeaderNav />
     <MainContent />
     <MainShop />
-    <MainInfo />
+    <footerInfo />
     <footerSocial />
   </div>
 </template>
@@ -12,7 +12,7 @@
 import HeaderNav from "./components/HeaderNav.vue";
 import MainContent from "./components/MainContent.vue";
 import MainShop from "./components/MainShop.vue";
-import MainInfo from "./components/MainInfo.vue";
+import footerInfo from "./components/footerInfo.vue";
 import footerSocial from "./components/footerSocial.vue";
 
 export default {
@@ -21,7 +21,7 @@ export default {
     HeaderNav,
     MainContent,
     MainShop,
-    MainInfo,
+    footerInfo,
     footerSocial,
   },
 };
