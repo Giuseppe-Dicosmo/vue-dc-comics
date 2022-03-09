@@ -49,11 +49,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$brand_color: white;
+$brand_blue: #0282f9;
+
 .container-Content {
   height: 10vh;
   width: 100%;
   background-color: #303030;
-  color: white;
+  color: $brand_color;
   display: flex;
   align-items: center;
 
@@ -61,13 +64,12 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    // border: 1px solid red;
 
     .button {
       padding: 10px;
-      color: white;
+      color: $brand_color;
       font-size: 15px;
-      border: 3px solid #0282f9;
+      border: 3px solid $brand_blue;
       text-decoration: none;
     }
     .container-social {
@@ -77,7 +79,7 @@ export default {
       height: 50%;
 
       span {
-        color: #0282f9;
+        color: $brand_blue;
       }
 
       figure {

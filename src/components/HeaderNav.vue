@@ -69,8 +69,9 @@ export default {
   },
 };
 </script>
-
 <style scoped lang="scss">
+$brand_blue: #0282f9;
+
 .container-header {
   height: 10vh;
   width: 100%;
@@ -110,8 +111,8 @@ export default {
 
         &:hover,
         &.active {
-          border-bottom: 5px solid #0282f9;
-          color: #0282f9;
+          border-bottom: 5px solid $brand_blue;
+          color: $brand_blue;
         }
       }
     }

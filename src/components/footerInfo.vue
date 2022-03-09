@@ -165,12 +165,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$brand_color: white;
 .container-Content {
   height: 55vh;
   width: 100%;
   background: url("../assets/footer-bg.jpg") no-repeat center;
   background-size: cover;
-  color: white;
+  color: $brand_color;
   display: flex;
   align-items: center;
 

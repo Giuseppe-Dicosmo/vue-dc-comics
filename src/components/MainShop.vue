@@ -54,11 +54,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$brand_color: white;
+
+$brand_blue: #0282f9;
+
 .container-Content {
   height: 15vh;
   width: 100%;
-  background-color: #0282f9;
-  color: white;
+  background: $brand_blue;
+  color: $brand_color;
   display: flex;
   align-items: center;
 
@@ -81,7 +85,7 @@ export default {
         font-size: 13px;
         gap: 10px;
         text-decoration: none;
-        color: white;
+        color: $brand_color;
         text-transform: uppercase;
         padding: 0 10px;
 
