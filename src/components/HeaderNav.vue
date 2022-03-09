@@ -7,7 +7,9 @@
         </figure>
         <ul>
           <li v-for="(link, i) in links" :key="i">
-            <a :href="link.href"> {{ link.text }} </a>
+            <a :class="link.active ? 'active' : ''" :href="link.href">
+              {{ link.text }}
+            </a>
           </li>
         </ul>
       </nav>
@@ -27,6 +29,7 @@ export default {
         },
         {
           text: "Comics",
+          active: "true",
           href: "#",
         },
         {
@@ -78,41 +81,38 @@ export default {
     align-self: center;
     height: 100%;
     list-style-type: none;
-  }
 
-  figure {
-    flex-grow: 1;
-    height: 100%;
-    padding: 10px 0;
-
-    img {
+    figure {
+      flex-grow: 1;
       height: 100%;
-    }
-  }
+      padding: 10px 0;
 
-  ul {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid transparent;
-
-    &:hover,
-    &:nth-child(2) {
-      border-bottom: 5px solid #0282f9;
+      img {
+        height: 100%;
+      }
     }
 
-    a {
-      font-size: 13px;
-      text-transform: uppercase;
-      text-decoration: none;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      list-style-type: none;
+      gap: 10px;
 
-      &:hover {
-        color: #0282f9;
+      a {
+        font-size: 13px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 5px solid transparent;
+        color: black;
+
+        &:hover,
+        &.active {
+          border-bottom: 5px solid #0282f9;
+          color: #0282f9;
+        }
       }
     }
   }
