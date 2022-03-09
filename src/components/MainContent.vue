@@ -2,7 +2,7 @@
   <section class="container-Content">
     <span class="Content-jumbotron"></span>
     <div class="container">
-      <button>Content series</button>
+      <button class="button-series">Content series</button>
       <ul>
         <li>
           <figure>
@@ -114,6 +114,7 @@
         </li>
       </ul>
     </div>
+    <button class="button-more">load more</button>
   </section>
 </template>
 
@@ -132,6 +133,7 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 
   .Content-jumbotron {
@@ -143,50 +145,61 @@ export default {
 
   .container {
     width: 100%;
-    height: 100%;
-    border: 1px solid red;
+    height: 45%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    // border: 1px solid red;
 
-    button {
+    .button-series {
       border: 1px solid #0282f9;
       background: #0282f9;
       color: white;
       text-transform: uppercase;
       font-size: 20px;
       padding: 10px;
+      cursor: pointer;
       position: absolute;
-      bottom: 94%;
+      bottom: 95%;
       left: 0;
-      transform: translate(0, -50%);
+      transform: translate(0, -70%);
     }
 
     ul {
       width: 95%;
+      height: 100%;
       display: flex;
       flex-flow: row wrap;
       gap: 20px;
-      border: 1px solid yellow;
       list-style-type: none;
+      // border: 1px solid yellow;
 
       li {
-        width: calc((100% / 6) - 20px);
-        height: calc((100% / 2) - 20px);
-        border: 1px solid fuchsia;
+        width: calc((100% / 6) - 17px);
+        // border: 1px solid fuchsia;
       }
 
       figure {
-        // height: 50%;
-        border: 1px solid green;
+        aspect-ratio: 1 / 1;
         overflow: hidden;
+        // border: 1px solid green;
 
         img {
           max-width: 100%;
         }
       }
     }
+  }
+
+  .button-more {
+    border: 1px solid #0282f9;
+    background: #0282f9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 35px;
+    cursor: pointer;
   }
 }
 </style>
